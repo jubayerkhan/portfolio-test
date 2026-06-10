@@ -75,5 +75,4 @@ Many hours of hard work have gone into this project. Your support will be very a
 to install run -----
 npm install --legacy-peer-deps
 
-
-
+its an older version of next js (v - 12). So that "custom-cursor-react": "^1.0.5", creates issue and conflict with react and next version.
