@@ -1,0 +1,187 @@
+{
+  "name": "MD JUBAYER KHAN",
+  "firstName": "Jubayer",
+  "lastName": "Khan",
+  "title": "Software Engineer",
+  "location": "Dhaka, Bangladesh",
+
+  "contact": {
+    "phone": "+8801971206180",
+    "email": "jubayer.khan.cs@gmail.com",
+    "linkedin": "YOUR_LINKEDIN_URL",
+    "github": "YOUR_GITHUB_URL"
+  },
+
+  "header": {
+    "taglineOne": "Hello 👋",
+    "taglineTwo": "I'm Jubayer Khan",
+    "taglineThree": "Software Engineer &",
+    "taglineFour": "Next.js Developer from Bangladesh"
+  },
+
+  "settings": {
+    "showCursor": false,
+    "showBlog": false,
+    "darkMode": true,
+    "showResume": true
+  },
+
+  "about": {
+    "summary": "Software Engineer with 1+ years of experience building scalable web applications using Next.js, Laravel, Tailwind CSS, and MySQL.",
+    "fullDescription": "Currently working at Annanovas IT Ltd, collaborating with international clients and developing enterprise ERP systems while focusing on scalable system design and modern web development."
+  },
+
+  "socials": [
+    {
+      "id": "1",
+      "title": "GitHub",
+      "link": "YOUR_GITHUB_URL"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "YOUR_LINKEDIN_URL"
+    },
+    {
+      "id": "3",
+      "title": "Email",
+      "link": "mailto:jubayer.khan.cs@gmail.com"
+    }
+  ],
+
+  "projects": [],
+
+  "services": [],
+
+  "resume": {
+    "tagline": "Software Engineer specializing in Next.js and Laravel.",
+
+    "education": {
+      "degree": "Bachelor of Science in Computer Science & Engineering",
+      "institution": "Dhaka City College, National University",
+      "graduationDate": "January 2025",
+      "cgpa": "3.36/4.00",
+      "medium": "English",
+      "coursework": [
+        "Data Structures",
+        "Software Engineering",
+        "DBMS",
+        "Artificial Intelligence",
+        "Web Technologies"
+      ]
+    },
+
+    "experience": [
+      {
+        "id": "1",
+        "company": "Annanovas IT Ltd",
+        "position": "Software Engineer",
+        "location": "Dhaka, Bangladesh",
+        "startDate": "December 2024",
+        "endDate": "Present",
+        "employmentType": "Full Time",
+        "responsibilities": [
+          "Engineered and maintained scalable web applications using Next.js and Laravel",
+          "Translated complex business requirements into ERP software solutions",
+          "Authored technical documentation and user manuals",
+          "Optimized database queries and API performance"
+        ]
+      }
+    ]
+  },
+
+  "skills": {
+    "proficient": [
+      "JavaScript",
+      "PHP",
+      "Next.js",
+      "Laravel",
+      "Tailwind CSS",
+      "MySQL",
+      "Git"
+    ],
+
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "Responsive Design",
+      "Figma to Code"
+    ],
+
+    "learning": [
+      "NestJS",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "MongoDB"
+    ],
+
+    "tools": [
+      "Git",
+      "Figma",
+      "Postman",
+      "Vercel",
+      "Netlify"
+    ]
+  },
+
+  "certifications": [
+    {
+      "id": "1",
+      "title": "CS50P: Introduction to Programming with Python",
+      "issuer": "Harvard University (edX)",
+      "year": "2024",
+      "certificateUrl": ""
+    }
+  ],
+
+  "languageProficiency": [
+    {
+      "language": "Bengali",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "Professional Working Proficiency"
+    }
+  ],
+
+  "testScores": [
+    {
+      "exam": "IELTS Academic",
+      "overall": "6.5",
+      "listening": "7.5",
+      "reading": "6.0",
+      "writing": "6.0",
+      "speaking": "6.5"
+    }
+  ],
+
+  "achievements": [
+    {
+      "id": "1",
+      "title": "First Position - Srigonsil Medha Onneson",
+      "organization": "Ministry of Education, Government of Bangladesh",
+      "description": "Achieved first position in a regional-level competitive examination."
+    }
+  ],
+
+  "community": [
+    {
+      "id": "1",
+      "organization": "Dhaka City College Programming Club",
+      "role": "Member",
+      "description": "Participated in workshops, mentoring sessions, and programming contests."
+    }
+  ],
+
+  "futureGoals": {
+    "higherStudy": "MSc in Software Engineering",
+    "researchInterests": [
+      "Scalable Systems",
+      "Software Engineering",
+      "Web Technologies",
+      "Distributed Systems"
+    ]
+  }
+}

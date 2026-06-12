@@ -56,28 +56,59 @@ const Resume = () => {
               <div className="mt-5">
                 <h1 className="text-2xl font-bold">Experience</h1>
 
-                {resume.experiences.map(
-                  ({ id, dates, type, position, bullets }) => (
+                {resume.experience.map(
+                  ({
+                    id,
+                    company,
+                    position,
+                    location,
+                    startDate,
+                    endDate,
+                    employmentType,
+                    responsibilities,
+                  }) => (
                     <ProjectResume
                       key={id}
-                      dates={dates}
-                      type={type}
+                      dates={`${startDate} - ${endDate}`}
+                      type={employmentType}
                       position={position}
-                      bullets={bullets}
+                      bullets={responsibilities}
                     ></ProjectResume>
-                  )
+                  ),
                 )}
               </div>
               <div className="mt-5">
                 <h1 className="text-2xl font-bold">Education</h1>
                 <div className="mt-2">
-                  <h2 className="text-lg">{resume.education.universityName}</h2>
-                  <h3 className="text-sm opacity-75">
-                    {resume.education.universityDate}
+                  <h2 className="text-lg font-semibold">
+                    {resume.education.degree}
+                  </h2>
+                  <h3 className="text-sm opacity-75 mt-1">
+                    {resume.education.institution}
                   </h3>
-                  <p className="text-sm mt-2 opacity-50">
-                    {resume.education.universityPara}
+                  <p className="text-sm opacity-60 mt-1">
+                    {resume.education.graduationDate}
+                    {resume.education.cgpa &&
+                      ` | CGPA: ${resume.education.cgpa}`}
                   </p>
+                  {resume.education.coursework &&
+                    resume.education.coursework.length > 0 && (
+                      <div className="mt-3">
+                        <p className="text-sm font-semibold opacity-75">
+                          Coursework:
+                        </p>
+                        <div className="flex flex-wrap gap-2 mt-2">
+                          {resume.education.coursework.map((course, idx) => (
+                            <span
+                              key={idx}
+                              className="text-xs bg-opacity-20 bg-gray-400 px-2 py-1 rounded"
+                            >
+                              {course}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                 </div>
               </div>
               <div className="mt-5">
@@ -123,6 +154,70 @@ const Resume = () => {
                   )}
                 </div>
               </div>
+              {/* test scores */}
+              {resume.testScores && resume.testScores.length > 0 && (
+                <div className="mt-5">
+                  <h1 className="text-2xl font-bold">Test Scores</h1>
+                  {resume.testScores.map((test, index) => (
+                    <div
+                      key={index}
+                      className="mt-4 p-4 rounded-lg border border-opacity-20 border-gray-400"
+                    >
+                      <h2 className="text-lg font-semibold">{test.exam}</h2>
+                      <div className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div className="flex flex-col">
+                          <span className="text-xs opacity-60 font-semibold uppercase">
+                            Overall
+                          </span>
+                          <span className="text-lg font-bold mt-1">
+                            {test.overall}
+                          </span>
+                        </div>
+                        {test.listening && (
+                          <div className="flex flex-col">
+                            <span className="text-xs opacity-60 font-semibold uppercase">
+                              Listening
+                            </span>
+                            <span className="text-lg font-bold mt-1">
+                              {test.listening}
+                            </span>
+                          </div>
+                        )}
+                        {test.reading && (
+                          <div className="flex flex-col">
+                            <span className="text-xs opacity-60 font-semibold uppercase">
+                              Reading
+                            </span>
+                            <span className="text-lg font-bold mt-1">
+                              {test.reading}
+                            </span>
+                          </div>
+                        )}
+                        {test.writing && (
+                          <div className="flex flex-col">
+                            <span className="text-xs opacity-60 font-semibold uppercase">
+                              Writing
+                            </span>
+                            <span className="text-lg font-bold mt-1">
+                              {test.writing}
+                            </span>
+                          </div>
+                        )}
+                        {test.speaking && (
+                          <div className="flex flex-col">
+                            <span className="text-xs opacity-60 font-semibold uppercase">
+                              Speaking
+                            </span>
+                            <span className="text-lg font-bold mt-1">
+                              {test.speaking}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}
