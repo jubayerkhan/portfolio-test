@@ -1,1 +1,140 @@
-{"name":"JUBAYER","headerTaglineOne":"Hello 👋","headerTaglineTwo":"I'm Jubayer Khan - passionate","headerTaglineThree":"Web devloper","headerTaglineFour":" based in Dhaka, Bangladesh.","showCursor":false,"showBlog":true,"darkMode":true,"showResume":true,"socials":[{"id":"1","title":"Github","link":"https://github.com/jubayerkhan"},{"id":"2","title":"LinkedIn","link":"https://www.linkedin.com/in/jubayer-khan-6a7167167/"},{"id":"3","title":"Email","link":"jubayer.khan.cs@gmail.com"}],"projects":[{"id":"1","title":"Askvalor","description":"Legal Services Marketplace built with Next.js and Tailwind CSS.","imageSrc":"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","url":"https://askvalor.co.uk/"},{"id":"2","title":"NextPick","description":"Media finder platform built using Next.js and Tailwind CSS.","imageSrc":"https://plus.unsplash.com/premium_photo-1673240367277-e1d394465b56?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","url":"YOUR_NEXTPICK_LIVE_LINK"},{"id":"3","title":"Safino","description":"Educational platform migrated from React.js to Next.js.","imageSrc":"https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","url":"YOUR_SAFINO_LIVE_LINK"},{"id":"4","title":"AHES","description":"Full-stack student support system with dynamic admin dashboard and CRUD operations.","imageSrc":"https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","url":"YOUR_GITHUB_LINK"},{"id":"5","title":"Farmers Market Platform","description":"Full-stack marketplace connecting rural farmers directly with urban consumers.","imageSrc":"https://plus.unsplash.com/premium_photo-1697402853118-04d9b24b72e0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","url":"YOUR_PROJECT_LINK"}],"services":[{"id":"1","title":"Art Direction","description":"We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."},{"id":"2","title":"Branding","description":"We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."},{"id":"3","title":"Web Design","description":"We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."},{"id":"4","title":"3D Design","description":"We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."}],"aboutpara":"Software Engineer with 1+ years of experience building scalable web applications using Next.js, Laravel, Tailwind CSS, and MySQL. Currently working at Annanovas IT Ltd, collaborating with international clients and developing enterprise ERP systems while focusing on scalable system design and modern web development.","resume":{"tagline":"👋  I'm a software engineer, product designer.","description":"I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.","experience":[{"id":"1","company":"Annanovas IT Ltd","position":"Software Engineer","location":"Dhaka, Bangladesh","startDate":"December 2024","endDate":"Present","employmentType":"Full Time","responsibilities":["Engineered and maintained scalable web applications using Next.js and Laravel","Translated complex business requirements into ERP software solutions","Authored technical documentation and user manuals","Optimized database queries and API performance"]}],"education":{"degree":"Bachelor of Science in Computer Science & Engineering","institution":"Dhaka City College, National University","graduationDate":"January 2025","cgpa":"3.36/4.00","medium":"English","coursework":["Data Structures","Software Engineering","DBMS","Artificial Intelligence","Web Technologies"]},"languages":["JavaScript","PHP","Tailwind CSS","MySQL","Git"],"frameworks":["React","Typescript","NodeJs","Laravel","Next.js"],"others":["Figma","AWS"],"languageProficiency":[{"language":"Bengali","level":"Native"},{"language":"English","level":"Professional Working Proficiency"}],"testScores":[{"exam":"IELTS Academic","overall":"6.5","listening":"7.5","reading":"6.0","writing":"6.0","speaking":"6.5"}],"achievements":[{"id":"1","title":"First Position - Srigonsil Medha Onneson","organization":"Ministry of Education, Government of Bangladesh","description":"Achieved first position in a regional-level competitive examination."}]}}
+{
+  "name": "JUBAYER",
+  "headerTaglineOne": "Hello 👋",
+  "headerTaglineTwo": "I'm Jubayer Khan - passionate",
+  "headerTaglineThree": "Web devloper",
+  "headerTaglineFour": " based in Dhaka, Bangladesh.",
+  "showCursor": false,
+  "showBlog": true,
+  "darkMode": true,
+  "showResume": true,
+  "socials": [
+    { "id": "1", "title": "Github", "link": "https://github.com/jubayerkhan" },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/jubayer-khan-6a7167167/"
+    },
+    { "id": "3", "title": "Email", "link": "jubayer.khan.cs@gmail.com" }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Askvalor",
+      "description": "Legal Services Marketplace built with Next.js and Tailwind CSS.",
+      "imageSrc": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "url": "https://askvalor.co.uk/"
+    },
+    {
+      "id": "2",
+      "title": "NextPick",
+      "description": "Media finder platform built using Next.js and Tailwind CSS.",
+      "imageSrc": "https://plus.unsplash.com/premium_photo-1673240367277-e1d394465b56?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "url": "YOUR_NEXTPICK_LIVE_LINK"
+    },
+    {
+      "id": "3",
+      "title": "Safino",
+      "description": "Educational platform migrated from React.js to Next.js.",
+      "imageSrc": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "url": "YOUR_SAFINO_LIVE_LINK"
+    },
+    {
+      "id": "4",
+      "title": "AHES",
+      "description": "Full-stack student support system with dynamic admin dashboard and CRUD operations.",
+      "imageSrc": "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "url": "YOUR_GITHUB_LINK"
+    },
+    {
+      "id": "5",
+      "title": "Farmers Market Platform",
+      "description": "Full-stack marketplace connecting rural farmers directly with urban consumers.",
+      "imageSrc": "https://plus.unsplash.com/premium_photo-1697402853118-04d9b24b72e0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "url": "YOUR_PROJECT_LINK"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Art Direction",
+      "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+    },
+    {
+      "id": "2",
+      "title": "Branding",
+      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+    },
+    {
+      "id": "3",
+      "title": "Web Design",
+      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+    },
+    {
+      "id": "4",
+      "title": "3D Design",
+      "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+    }
+  ],
+  "aboutpara": "Software Engineer with 1+ years of experience building scalable web applications using Next.js, Laravel, Tailwind CSS, and MySQL. Currently working at Annanovas IT Ltd, collaborating with international clients and developing enterprise ERP systems while focusing on scalable system design and modern web development.",
+  "resume": {
+    "tagline": "👋  I'm a software engineer, product designer.",
+    "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+    "experience": [
+      {
+        "id": "1",
+        "company": "Annanovas IT Ltd",
+        "position": "Software Engineer",
+        "location": "Dhaka, Bangladesh",
+        "startDate": "December 2024",
+        "endDate": "Present",
+        "employmentType": "Full Time",
+        "responsibilities": [
+          "Engineered and maintained scalable web applications using Next.js and Laravel",
+          "Translated complex business requirements into ERP software solutions",
+          "Authored technical documentation and user manuals",
+          "Optimized database queries and API performance"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "Bachelor of Science in Computer Science & Engineering",
+      "institution": "Dhaka City College, National University",
+      "graduationDate": "January 2025",
+      "cgpa": "3.36/4.00",
+      "medium": "English",
+      "coursework": [
+        "Data Structures",
+        "Software Engineering",
+        "DBMS",
+        "Artificial Intelligence",
+        "Web Technologies"
+      ]
+    },
+    "languages": ["JavaScript", "PHP", "Tailwind CSS", "MySQL", "Git"],
+    "frameworks": ["React", "Typescript", "NodeJs", "Laravel", "Next.js"],
+    "others": ["Figma", "AWS"],
+    "languageProficiency": [
+      { "language": "Bengali", "level": "Native" },
+      { "language": "English", "level": "Professional Working Proficiency" }
+    ],
+    "testScores": [
+      {
+        "exam": "IELTS Academic",
+        "overall": "6.5",
+        "listening": "7.5",
+        "reading": "6.0",
+        "writing": "6.0",
+        "speaking": "6.5"
+      }
+    ],
+    "achievements": [
+      {
+        "id": "1",
+        "title": "First Position - Srigonsil Medha Onneson",
+        "organization": "Ministry of Education, Government of Bangladesh",
+        "description": "Achieved first position in a regional-level competitive examination."
+      }
+    ]
+  }
+}

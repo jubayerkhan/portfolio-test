@@ -1,16 +1,16 @@
-import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
-import Link from "next/link";
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
+  const isEditPage = router.pathname === "/edit";
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const { name, showBlog, showResume } = data;
 
@@ -18,114 +18,181 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
     setMounted(true);
   }, []);
 
+  const toggleDrawer = () => setDrawerOpen((prev) => !prev);
+  const closeDrawer = () => setDrawerOpen(false);
+
+  const menuItems = (
+    <>
+      {!isBlog ? (
+        <div className="grid grid-cols-1">
+          <Button
+            onClick={() => {
+              handleWorkScroll();
+              closeDrawer();
+            }}
+          >
+            Work
+          </Button>
+          <Button
+            onClick={() => {
+              handleAboutScroll();
+              closeDrawer();
+            }}
+          >
+            About
+          </Button>
+          {showBlog && (
+            <Button
+              onClick={() => {
+                router.push("/blog");
+                closeDrawer();
+              }}
+            >
+              Blog
+            </Button>
+          )}
+          {showResume && (
+            <Button
+              onClick={() => {
+                router.push("/resume");
+                closeDrawer();
+              }}
+            >
+              Resume
+            </Button>
+          )}
+          <Button
+            onClick={() => {
+              router.push("/contact");
+              closeDrawer();
+            }}
+          >
+            Contact
+          </Button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1">
+          <Button
+            onClick={() => {
+              router.push("/");
+              closeDrawer();
+            }}
+            classes="first:ml-1"
+          >
+            Home
+          </Button>
+          {showBlog && (
+            <Button
+              onClick={() => {
+                router.push("/blog");
+                closeDrawer();
+              }}
+            >
+              Blog
+            </Button>
+          )}
+          {showResume && (
+            <Button
+              onClick={() => {
+                router.push("/resume");
+                closeDrawer();
+              }}
+              classes="first:ml-1"
+            >
+              Resume
+            </Button>
+          )}
+          <Button
+            onClick={() => {
+              router.push("/contact");
+              closeDrawer();
+            }}
+          >
+            Contact
+          </Button>
+        </div>
+      )}
+    </>
+  );
+
   return (
     <>
-      <Popover className="block tablet:hidden mt-5">
-        {({ open }) => (
-          <>
-            <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
-                onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
+      <div className="block tablet:hidden mt-5">
+        <div className="flex items-center justify-between p-2 laptop:p-0">
+          <h1
+            onClick={() => {
+              router.push("/");
+              closeDrawer();
+            }}
+            className="font-medium p-2 laptop:p-0 link"
+          >
+            {name}.
+          </h1>
+
+          <div className="flex items-center gap-2">
+            {data.darkMode && (
+              <Button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                {name}.
-              </h1>
+                <img
+                  className="h-6"
+                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                ></img>
+              </Button>
+            )}
+            <button type="button" onClick={toggleDrawer} className="p-2">
+              <img
+                className="h-5"
+                src={`/images/${
+                  drawerOpen
+                    ? theme === "light"
+                      ? "cancel.svg"
+                      : "cancel-white.svg"
+                    : theme === "dark"
+                      ? "menu-white.svg"
+                      : "menu.svg"
+                }`}
+                alt={drawerOpen ? "Close menu" : "Open menu"}
+              />
+            </button>
+          </div>
+        </div>
 
-              <div className="flex items-center">
-                {data.darkMode && (
-                  <Button
-                    onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
-                    }
-                  >
-                    <img
-                      className="h-6"
-                      src={`/images/${
-                        theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`}
-                    ></img>
-                  </Button>
-                )}
+        <div
+          className={`fixed inset-0 z-40 transition-opacity duration-300 ${
+            drawerOpen
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          }`}
+          aria-hidden={!drawerOpen}
+          onClick={closeDrawer}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-30" />
+        </div>
 
-                <Popover.Button>
-                  <img
-                    className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                          ? "cancel.svg"
-                          : "cancel-white.svg"
-                    }`}
-                  ></img>
-                </Popover.Button>
-              </div>
-            </div>
-            <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${
-                theme === "dark" ? "bg-slate-800" : "bg-white"
-              } shadow-md rounded-md`}
-            >
-              {!isBlog ? (
-                <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-                  {showResume && (
-                    <Button
-                      onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
-                      }
-                    >
-                      Resume
-                    </Button>
-                  )}
-
-                  <Link href="/contact">
-                    <Button
-                    // onClick={() => window.open("mailto:jubayer.khan.cs@gmail.com")}
-                    >
-                      Contact
-                    </Button>
-                  </Link>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1">
-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
-                    Home
-                  </Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-                  {showResume && (
-                    <Button
-                      onClick={() => router.push("/resume")}
-                      classes="first:ml-1"
-                    >
-                      Resume
-                    </Button>
-                  )}
-
-                  <Link href="/contact">
-                    <Button
-                    // onClick={() => window.open("mailto:jubayer.khan.cs@gmail.com")}
-                    >
-                      Contact
-                    </Button>
-                  </Link>
-                </div>
-              )}
-            </Popover.Panel>
-          </>
-        )}
-      </Popover>
+        <div
+          className={`fixed top-0 right-0 z-50 h-full w-11/12 max-w-sm overflow-auto bg-black p-4 shadow-2xl transition-transform duration-300 dark:bg-slate-900 ${
+            drawerOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-medium">Menu</h2>
+            <button type="button" onClick={closeDrawer} className="p-2">
+              <img
+                className="h-5"
+                src={`/images/${
+                  theme === "light" ? "cancel.svg" : "cancel-white.svg"
+                }`}
+                alt="Close menu"
+              />
+            </button>
+          </div>
+          {menuItems}
+        </div>
+      </div>
       <div
         className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
+          theme === "light" ? "bg-black" : ""
         } dark:text-white top-0 z-10 tablet:flex bg-opacity-80 backdrop-blur-sm`}
       >
         <h1
@@ -149,14 +216,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 Resume
               </Button>
             )}
-
-            <Link href="/contact">
-              <Button
-              // onClick={() => window.open("mailto:jubayer.khan.cs@gmail.com")}
-              >
-                Contact
-              </Button>
-            </Link>
+            <Button onClick={() => router.push("/contact")}>Contact</Button>
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -182,23 +242,18 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 Resume
               </Button>
             )}
-
-            <Link href="/contact">
-              <Button
-              // onClick={() => window.open("mailto:jubayer.khan.cs@gmail.com")}
+            <Button onClick={() => router.push("/contact")}>Contact</Button>
+            {isEditPage && (
+              <button
+                onClick={() => {
+                  localStorage.removeItem("admin");
+                  router.push("/login");
+                }}
+                className="px-4 py-2 rounded-lg border border-gray-400 hover:bg-gray-100 dark:hover:bg-slate-700 transition"
               >
-                Contact
-              </Button>
-            </Link>
-            <button
-              onClick={() => {
-                localStorage.removeItem("admin");
-                router.push("/login");
-              }}
-            >
-              Logout
-            </button>
-
+                Logout
+              </button>
+            )}
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
