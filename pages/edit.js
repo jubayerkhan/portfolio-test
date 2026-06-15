@@ -3,6 +3,8 @@ import Button from "../components/Button";
 import Header from "../components/Header";
 import { v4 as uuidv4 } from "uuid";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 // Data
 import yourData from "../data/portfolio.json";
@@ -13,6 +15,16 @@ const Edit = () => {
   const [data, setData] = useState(yourData);
   const [currentTabs, setCurrentTabs] = useState("HEADER");
   const { theme } = useTheme();
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const admin = localStorage.getItem("admin");
+
+    if (admin !== "true") {
+      router.push("/login");
+    }
+  }, []);
 
   const saveData = () => {
     if (process.env.NODE_ENV === "development") {
@@ -757,7 +769,7 @@ const Edit = () => {
                             resume: {
                               ...data.resume,
                               languages: data.resume.languages.filter(
-                                (value, i) => index !== i
+                                (value, i) => index !== i,
                               ),
                             },
                           })
@@ -815,7 +827,7 @@ const Edit = () => {
                             resume: {
                               ...data.resume,
                               frameworks: data.resume.frameworks.filter(
-                                (value, i) => index !== i
+                                (value, i) => index !== i,
                               ),
                             },
                           })
@@ -873,7 +885,7 @@ const Edit = () => {
                             resume: {
                               ...data.resume,
                               others: data.resume.others.filter(
-                                (value, i) => index !== i
+                                (value, i) => index !== i,
                               ),
                             },
                           })

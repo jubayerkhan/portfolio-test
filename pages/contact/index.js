@@ -59,7 +59,7 @@ const Contact = () => {
 
                   <div className="flex gap-4">
                     <a
-                      href="https://github.com/YOUR_GITHUB"
+                      href="https://github.com/jubayerkhan"
                       target="_blank"
                       rel="noreferrer"
                       className="border px-5 py-2 rounded-full hover:scale-105 transition"
@@ -68,7 +68,7 @@ const Contact = () => {
                     </a>
 
                     <a
-                      href="https://linkedin.com/in/YOUR_LINKEDIN"
+                      href="https://www.linkedin.com/in/jubayer-khan-6a7167167/"
                       target="_blank"
                       rel="noreferrer"
                       className="border px-5 py-2 rounded-full hover:scale-105 transition"

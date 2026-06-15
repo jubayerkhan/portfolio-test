@@ -190,6 +190,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 Contact
               </Button>
             </Link>
+            <button
+              onClick={() => {
+                localStorage.removeItem("admin");
+                router.push("/login");
+              }}
+            >
+              Logout
+            </button>
 
             {mounted && theme && data.darkMode && (
               <Button
