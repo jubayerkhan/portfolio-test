@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
+import Link from "next/link";
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
@@ -55,8 +56,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                           ? "menu-white.svg"
                           : "menu.svg"
                         : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
+                          ? "cancel.svg"
+                          : "cancel-white.svg"
                     }`}
                   ></img>
                 </Popover.Button>
@@ -84,11 +85,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
 
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
+                  <Link href="/contact">
+                    <Button
+                    // onClick={() => window.open("mailto:jubayer.khan.cs@gmail.com")}
+                    >
+                      Contact
+                    </Button>
+                  </Link>
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
@@ -107,11 +110,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
 
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
+                  <Link href="/contact">
+                    <Button
+                    // onClick={() => window.open("mailto:jubayer.khan.cs@gmail.com")}
+                    >
+                      Contact
+                    </Button>
+                  </Link>
                 </div>
               )}
             </Popover.Panel>
@@ -145,9 +150,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
-            </Button>
+            <Link href="/contact">
+              <Button
+              // onClick={() => window.open("mailto:jubayer.khan.cs@gmail.com")}
+              >
+                Contact
+              </Button>
+            </Link>
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -174,9 +183,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
-            </Button>
+            <Link href="/contact">
+              <Button
+              // onClick={() => window.open("mailto:jubayer.khan.cs@gmail.com")}
+              >
+                Contact
+              </Button>
+            </Link>
 
             {mounted && theme && data.darkMode && (
               <Button
