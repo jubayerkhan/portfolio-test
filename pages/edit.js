@@ -582,10 +582,10 @@ const Edit = () => {
 
             <h1>Experiences</h1>
             <div className="mt-10">
-              {data.resume.experiences.map((experiences, index) => (
-                <div className="mt-5" key={experiences.id}>
+              {data.resume.experience.map((experience, index) => (
+                <div className="mt-5" key={experience.id}>
                   <div className="flex items-center justify-between">
-                    <h1 className="text-2xl">{experiences.position}</h1>
+                    <h1 className="text-2xl">{experience.position}</h1>
                     <Button
                       // onClick={() => deleteProject(project.id)}
                       type="primary"
@@ -597,10 +597,10 @@ const Edit = () => {
                   <div className="flex items-center mt-5">
                     <label className="w-1/5 text-lg opacity-50">Dates</label>
                     <input
-                      value={experiences.dates}
+                      value={experience.dates}
                       onChange={(e) =>
                         handleEditExperiences(index, {
-                          ...experiences,
+                          ...experience,
                           dates: e.target.value,
                         })
                       }
@@ -611,10 +611,10 @@ const Edit = () => {
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">Type</label>
                     <input
-                      value={experiences.type}
+                      value={experience.type}
                       onChange={(e) =>
                         handleEditExperiences(index, {
-                          ...experiences,
+                          ...experience,
                           type: e.target.value,
                         })
                       }
@@ -625,10 +625,10 @@ const Edit = () => {
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">Position</label>
                     <input
-                      value={experiences.position}
+                      value={experience.position}
                       onChange={(e) =>
                         handleEditExperiences(index, {
-                          ...experiences,
+                          ...experience,
                           position: e.target.value,
                         })
                       }
@@ -640,10 +640,10 @@ const Edit = () => {
                     <label className="w-1/5 text-lg opacity-50">Bullets</label>
                     <div className="w-4/5 ml-10 flex flex-col">
                       <input
-                        value={experiences.bullets}
+                        value={experience.bullets}
                         onChange={(e) =>
                           handleEditExperiences(index, {
-                            ...experiences,
+                            ...experience,
                             bullets: e.target.value,
                           })
                         }
