@@ -13,11 +13,11 @@ const Contact = () => {
             </p>
 
             <h1 className="mt-4 text-5xl md:text-6xl font-bold">
-              Let's Build Something Great Together.
+              Let&apos;s Build Something Great Together.
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg text-gray-500">
-              I'm always interested in discussing software engineering,
+              I&apos;m always interested in discussing software engineering,
               full-stack development, Next.js projects, freelance opportunities,
               and graduate research opportunities in Software Engineering.
             </p>
@@ -125,7 +125,7 @@ const Contact = () => {
 
             <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
               Whether you have a project, internship opportunity, freelance
-              work, or research collaboration in mind, I'd be happy to hear from
+              work, or research collaboration in mind, I&apos;d be happy to hear from
               you.
             </p>
           </div>

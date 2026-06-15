@@ -24,7 +24,7 @@ const Edit = () => {
     if (admin !== "true") {
       router.push("/login");
     }
-  }, []);
+  }, [router]);
 
   const saveData = () => {
     if (process.env.NODE_ENV === "development") {
