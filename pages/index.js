@@ -95,7 +95,7 @@ export default function Home() {
             </div>
             <Image
               className="rounded-lg hidden md:block object-cover"
-              src={photo}
+              src="/images/photo2.png"
               alt="Header Image"
               width={900}
               height={600}
