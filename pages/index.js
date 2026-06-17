@@ -94,7 +94,7 @@ export default function Home() {
               </h1>
             </div>
             <Image
-              className="rounded-lg hidden md:block object-cover"
+              className="rounded-lg object-cover"
               src={photo}
               // src="/images/photo2.png"
               alt="Header Image"
