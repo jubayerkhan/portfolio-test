@@ -15,6 +15,7 @@ import Image from "next/image";
 
 // Local Data
 import data from "../data/portfolio.json";
+import Hero from "../components/Hero";
 
 export default function Home() {
   // Ref
@@ -60,12 +61,12 @@ export default function Home() {
       {/* <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div> */}
 
-      <div className="container mx-auto mb-10">
+      <div className="mb-10">
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
-        <div className="laptop:mt-20 mt-10">
+        {/* <div className="laptop:mt-20 mt-10">
           <div className="flex items-center">
             <div className="mt-5">
               <h1
@@ -95,8 +96,6 @@ export default function Home() {
             </div>
             <img
               className="rounded-lg object-cover"
-              // src={photo}
-              // src="/images/photo2.png"
               src="https://i.imgur.com/bTWVngm.png"
               alt="Header Image"
               width={900}
@@ -105,50 +104,51 @@ export default function Home() {
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
-        </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Work.</h1>
+        </div> */}
+        <Hero
+          data={data}
+          textOne={textOne}
+          textTwo={textTwo}
+          textThree={textThree}
+          textFour={textFour}
+        />
+        <div className="container mx-auto">
+          <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+            <h1 className="text-2xl text-bold">Work.</h1>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {data.projects.map((project) => (
-              <WorkCard
-                key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
-              />
-            ))}
+            <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+              {data.projects.map((project) => (
+                <WorkCard
+                  key={project.id}
+                  img={project.imageSrc}
+                  name={project.title}
+                  description={project.description}
+                  onClick={() => window.open(project.url)}
+                />
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
+          <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+            <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
+            <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
+              {data.services.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  name={service.title}
+                  description={service.description}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        {/* This button should not go into production */}
-        {/* {process.env.NODE_ENV === "development" && (
-          <div className="fixed bottom-5 right-5">
-            <Link href="/edit">
-              <Button type="primary">Edit Data</Button>
-            </Link>
+          <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
+            <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
+            <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+              {data.aboutpara}
+            </p>
           </div>
-        )} */}
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </div>
   );
