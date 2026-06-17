@@ -93,10 +93,11 @@ export default function Home() {
                 {data.headerTaglineFour}
               </h1>
             </div>
-            <Image
+            <img
               className="rounded-lg object-cover"
-              src={photo}
+              // src={photo}
               // src="/images/photo2.png"
+              src="https://i.imgur.com/bTWVngm.png"
               alt="Header Image"
               width={900}
               height={600}
