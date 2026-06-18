@@ -171,7 +171,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         </div>
 
         <div
-          className={`fixed top-0 left-0 z-50 h-full w-11/12 max-w-sm overflow-auto bg-black p-4 shadow-2xl transition-transform duration-300 dark:bg-slate-900 ${
+          className={`fixed top-0 right-0 z-50 h-full w-11/12 max-w-sm overflow-auto bg-black p-4 shadow-2xl transition-transform duration-300 dark:bg-slate-900 ${
             drawerOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

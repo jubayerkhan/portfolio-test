@@ -47,7 +47,7 @@ export default function Hero({ data, textOne, textTwo, textThree, textFour }) {
         <div className="w-full laptop:w-1/2">
           <p
             ref={textOne}
-            className="reveal-line text-sm tablet:text-base font-medium tracking-wide text-sky-400"
+            className="reveal-line text-sm tablet:text-2xl font-medium tracking-wide text-sky-400"
             style={{ animationDelay: "0.05s" }}
           >
             {data.headerTaglineOne}
