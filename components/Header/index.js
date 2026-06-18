@@ -191,7 +191,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         </div>
       </div>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky container mx-auto z-100 ${
+        className={`mt-10 hidden flex-row items-center justify-between sticky container mx-auto z-[100] ${
           theme === "light" ? "bg-black" : ""
         } dark:text-white top-0 z-10 tablet:flex bg-opacity-80 backdrop-blur-sm`}
       >
