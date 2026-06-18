@@ -31,32 +31,53 @@ export default function Login() {
   };
 
   return (
-    <div className="container mx-auto max-w-md py-20">
-      <h1 className="text-3xl font-bold mb-8">Admin Login</h1>
+    <div className="min-h-screen flex items-center justify-center bg-dynamic relative overflow-hidden">
+      <div className="gradient-circle" aria-hidden="true" />
+      <div className="gradient-circle-bottom" aria-hidden="true" />
 
-      <form onSubmit={handleLogin} className="space-y-4">
-        <input
-          className="w-full border p-3 rounded"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+      <div className="relative w-full max-w-md p-8 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-2xl">
+        <div className="mb-6 text-center">
+          <h1 className="text-2xl md:text-3xl font-bold text-sky-200">
+            Admin Login
+          </h1>
+          <p className="mt-2 text-sm text-sky-100/80">
+            Sign in to manage your portfolio
+          </p>
+        </div>
 
-        <input
-          className="w-full border p-3 rounded"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <form onSubmit={handleLogin} className="space-y-4">
+          <input
+            className="w-full px-4 py-3 bg-black/30 border border-white/12 placeholder-sky-100/60 text-sky-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 transition"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            aria-label="Username"
+          />
 
-        <button
-          className="w-full bg-black text-white py-3 rounded"
-          type="submit"
-        >
-          Login
-        </button>
-      </form>
+          <input
+            className="w-full px-4 py-3 bg-black/30 border border-white/12 placeholder-sky-100/60 text-sky-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 transition"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            aria-label="Password"
+          />
+
+          <button
+            className="w-full bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-900 text-white py-3 rounded-lg font-semibold hover:scale-[1.02] active:scale-100 transform-gpu transition shadow-[0_8px_30px_rgba(2,6,23,0.6)]"
+            type="submit"
+            aria-label="Login"
+          >
+            Login
+          </button>
+        </form>
+
+        <div className="mt-4 text-center text-sm text-white/70">
+          <a href="/" className="underline hover:text-white">
+            Back to site
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
